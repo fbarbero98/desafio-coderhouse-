@@ -1,0 +1,395 @@
+@import "bs_scss/bootstrap.scss";
+
+
+/*Etiquetas generales*/
+
+fieldset{
+    background-color: #6e869b;
+    margin: 5px;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    width: 100%;
+
+}
+a {
+    color: rgb(0, 0, 0);
+}
+
+ul{
+    a{
+        font-weight: bold;
+    }
+}
+
+/*HEADER*/
+
+.logo{
+    width: 200px;
+    height: 200px;
+}
+
+/*INICIAR SESION Y REGISTRO*/
+
+.usuario{
+    display: flex;
+    flex-direction:column;
+    align-items: flex-end;
+    margin-right: 5%;
+    width: 100%;
+    
+    ul{
+        text-decoration: none;
+        list-style-type: none;
+    }
+}
+
+.personas{
+    width: 20px;
+    height: 20px;
+}
+
+/*NAVEGACION / MENU CON SUBMENU*/
+nav{
+    background-color: #ffc107;
+    font-size: 16px;
+    ul{
+        li{
+            display: inline-block;
+            position:relative;
+            margin: 10px 30px;
+        }
+        ul{
+            position: absolute;
+            display: none;
+            background-color: white;
+            left: 0;
+            list-style: none;
+            width: 200px; 
+            li{
+                display: block;
+            }
+        }
+    }
+}
+/*BOTON FLOTANTE WPP*/
+#whatsApp{
+    width: 80px;
+    height: 80px;
+
+    position: fixed;
+    bottom: 10%;
+    right: 3%;
+    :hover{
+        animation-name: bounce;
+        animation-iteration-count:initial; /*CUANTO SE REPITE*/
+        animation-timing-function: ease-in; /*FLUJO DE VELOCIDAD*/
+        animation-duration: 0.7s;
+        animation-delay: 0s;
+    }
+}
+
+/*PRODUCTOS*/
+.productos{
+    width: 100%;
+}
+.verTodos{
+    margin: 10px;
+}
+.productosVolver{
+    margin: 5px;
+}
+
+/*NOSOTROS*/
+/*primer area*/
+
+#quienessomos{
+    background-color: #ffd556;
+    color: rgb(0, 0, 0);
+    margin: 5px;
+
+    display: grid;
+    
+    grid-template-areas: 
+    "texto ubicacion"
+    "texto ubicacion";
+
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    }
+
+.texto{
+        grid-area: texto;
+        margin: 10px;
+    }
+.ubicacion{
+        grid-area: ubicacion;
+        margin: 5px;
+        p{
+            width: 70%;
+            margin-bottom: 5px;
+            overflow:auto;
+        }
+    }
+
+#mapa{
+    width: 80%;
+    height: 65%;
+}
+#spanDireccion{
+    color: navy;
+}
+@media(max-width: 883px){
+    #quienessomos{
+        background-color: #ffd556;
+        color: rgb(0, 0, 0);
+        margin: 5px;
+        display: block;
+    }    
+
+}
+
+/*segunda area*/
+
+
+#comentariosGrid{
+    display: grid;
+    grid-template-areas: 
+    "comments caja"
+    "comments caja";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+}
+.commentClient{
+    grid-area: comments;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: black solid;
+    margin: 5px;
+    h3{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+#comments{
+    background-color: #ecc825;
+    td{
+        padding: 5px;
+        font-weight: bold;
+    }
+    th{
+        padding: 5px;
+        font-weight: bold;
+    }
+}
+
+.commentBox{
+    grid-area: caja;
+    margin: 5px;
+    padding: 5px;
+    border: black solid;
+    background-color: #ffd556;
+}
+textarea{
+    width: 80%;
+    height: 200px;
+}
+
+@media(max-width: 883px){
+    #comentariosGrid{
+        display: block;
+    }
+}
+
+/* tercer area*/
+
+.redes{
+    width: 30px;
+    height: 30px;
+}
+
+/*CONTACTO*/
+
+.consultas{
+    background-color: #ffd556;
+    color: rgb(0, 0, 0);
+    margin: 5px;
+
+    display: grid;
+    
+    grid-template-areas:
+    
+    "nombre apellido consulta"
+    "telefono mail consulta"
+    "comunicacion comunicacion consulta"
+    "acepta acepta botones";
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr ;
+}
+.nombre{
+    grid-area: nombre;
+    margin: 5px;
+}
+.apellido{
+    grid-area: apellido;
+    margin: 5px;
+}
+.telefono{
+    grid-area: telefono;
+    margin: 5px;
+}
+.mail{
+    grid-area: mail;
+    margin: 5px;
+}
+
+.consultaBox{
+    grid-area: consulta;
+}
+
+.comunicacion{
+    grid-area: comunicacion;
+}
+.acepta{
+    grid-area: acepta
+}
+
+.botones{
+    grid-area: botones;
+}
+
+
+@media (max-width: 883px){
+    .consultas{
+    background-color: #ffd556;
+    color: rgb(0, 0, 0);
+    margin: 5px;
+    display: block;
+            
+    }
+}
+
+
+/*FOOTER*/
+footer{
+    text-align: center;
+    background-color: grey;
+    
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+}
+
+
+/*SITIOS QUE NO SON INDEX*/
+
+.iniciarsesion{
+    background-color: #6e869b;
+}
+
+
+
+/*SITIOS DE LOS PRODUCTOS*/
+
+
+/*CLASES*/
+.bodyProductos{
+    background-color:#b3cadf ;
+}
+
+.articuloProductos{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 5px;
+    p{
+        margin: 10px;
+    }
+}
+.info{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.imagenesDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.infoContenido{
+    margin: 10px;
+    padding: 10px;
+}
+
+.imagenMedio{
+    width: 45%;
+    height: 45%;
+}
+.imagenFinal{
+    width: 80%;
+    height: 70%;
+    margin: 5px;
+}
+
+@media (max-width: 768px){
+    .imagenMedio{
+        width: 70%;
+        margin: 5px;
+    }
+    .imagenFinal{
+        width: 90%;
+    }
+}
+
+/*HEADER */
+.headerBari{
+    background-image: url(../imagenes/imagenes_destinos/destino_bar.jpg);
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-position:center;
+    color: white;
+    text-align: center;
+}
+
+
+
+.headerMdz{
+    background-image: url(../imagenes/imagenes_destinos/destino_mdz.jpg);
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-position:center;
+    color: black;
+    text-align: center;
+}
+
+.headerIgz{
+    background-image: url(../imagenes/imagenes_destinos/destino_igz.jpg);
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-position:center;
+    color: black;
+    text-align: center;
+}
+.headerUsh{
+    background-image: url(../imagenes/imagenes_destinos/destino_ush.jpg);
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-position:center;
+    color: black;
+    text-align: center;
+}
+
+
+
